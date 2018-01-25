@@ -100,6 +100,7 @@
 					<button id="switchINJ">Injustice: Gods Among Us</button>
 					<button id="switchINJ2">Injustice 2</button>
 					<button id="switchGGREV">Guilty Gear Xrd -Revelator-</button>
+					<button id="switchJJBA">Jojo's Bizarre Adventure</button>
 					<button id="switchBrawlhalla">Brawlhalla</button>
 					<button id="switchCorrinMode">SSB4 - Corrin Mode</button>
 					<button id="switchOW">Overwatch</button>
@@ -153,7 +154,7 @@
 		var gameUSF2 = ["USF2","akuma","balrog","blanka","cammy","chun-li","dee-jay","dhalsim","ehonda","evil-ryu", "fei-long","guile","ken","m-bison","ryu","sagat","t-hawk","vega","violent-ken","zangief"];
 		var gameSF33S = ["SF33S","akuma","alex","chun-li","dudley","elena","hugo","ibuki","ken","makoto","necro","oro","q","remy","ryu","sean","twelve","urien","yang","yun"];
 		var gameUSF4 = ["USF4","abel","adon","akuma","balrog","blanka","cammy","chunli","cody","cviper","dan","decapre","deejay","dudley","ehonda","elena","elfuerte","evilryu","feilong","gen","gouken","guile","guy","hakan","ibuki","juri","ken","makoto","mbison","oni","poison","rolento","rose","rufus","ryu","sagat","sakura","seth","thawk","vega","yang","yun","zangief"];
-		var gameSFV = ["sfv","abigail","alex","akuma","balrog","birdie","cammy","chunli","dhalsim","ed","fang","guile","ibuki","juri","karin","ken","kolin","laura","mbison","menat","nash","necalli","rashid","rmika","ryu","urien","vega","zangief","zeku"];
+		var gameSFV = ["sfv","abigail","alex","akuma","balrog","birdie","blanka","cammy","chunli","cody","dhalsim","ed","falke","fang","g","guile","ibuki","juri","karin","ken","kolin","laura","mbison","menat","nash","necalli","rashid","rmika","ryu","sagat","sakura","urien","vega","zangief","zeku"];
 		var gameGGREV = ["ggrev","axl","bedman","chipp","elphelt","faust","ino","jacko","jam","johnny","kum","ky","leo","may","millia","potemkin","ramlethal","raven","sin","slayer","sol","venom","zato1","dizzy"];
 		var gameMKX = ["MKX"];
 		var gameINJ = ["INJ"];
@@ -164,8 +165,9 @@
 		var gameCrusade = ["crusade","mario", "drmario", "luigi", "weegee", "peach", "toad", "bowser", "petey", "waluigi", "wario", "ashley", "dk", "yoshi", "geno", "pikachu", "pichu", "jigglypuff", "mewtwo", "lucario", "snivy", "samus", "zss", "ridley", "link", "toonlink", "ganondorf", "tingle", "olimar", "marth", "fox", "falco", "krystal", "falcon", "kirby", "gooey", "metaknight", "ness", "lucas", "porky", "littlemac", "saki", "iceclimbers", "rob", "duckhuntdog", "machrider", "mrgameandwatch", "snake", "bomberman", "sonic", "tails", "knuckles", "shadow", "ristar", "shantae", "negashantae", "rayman", "crash", "megaman", "ryu", "evilryu", "chunli", "phoenix", "pacman", "klonoa", "goku"]
 		var gameCorrinMode = ["ssb4r","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm"];
 		var gameOW = ["ow","ana","bastion","doomfist","dva","genji","hanzo","junkrat","lucio","mccree","mei","mercy","orisa","pharah","reaper","reinhardt","roadhog","soldier","sombra","symmetra","torbjorn","tracer","widowmaker","winston","zarya","zenyatta"];
+		var gameJJBA = ["JJBA", "advol", "alessi", "blackpolnareff", "chaka", "d'bo", "dio", "holhorse", "holhorseandboingo", "iggy", "joseph", "jotaro", "kakyoin", "khan", "mariah", "midler", "newkakyoin", "petshop", "polnareff", "rubbersoul", "shadowdio", "vanillaice", "youngjoseph"];
 		var gameBrawlhalla = ["bh","ada","asuri","azoth","barraza","bodvar","brynn","cassidy","diana","ember","gnash","hattori","jhala","koji","kor","lordvraxx","lucien","orion","queennai","ragnir","scarlet","sentinel","sirroland","teros","thatch","ulgrim","val","wushang","axe","bow","gauntlet","gun","hammer","katar","lance","spear","sword"];
-		var gameRoA = ["RoA","zetterburn", "orcane", "wrastor", "kragg", "forsburn", "maypul", "absa", "etalus", "oriandsein", "ranno", "clairen"];
+		var gameRoA = ["RoA","zetterburn", "orcane", "wrastor", "kragg", "forsburn", "maypul", "absa", "etalus", "oriandsein", "ranno", "clairen","sylvanos"];
 		
 		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
@@ -261,6 +263,7 @@
 				case "switchMKX": changeGame(gameMKX);break;
 				case "switchINJ": changeGame(gameINJ);break;
 				case "switchINJ2": changeGame(gameINJ2);break;
+				case "switchJJBA": changeGane(gameJJBA);break;
 				case "switchRoA": changeGame(gameRoA);break;
 				case "switchOW": changeGame(gameOW);break;
 			}
@@ -354,6 +357,7 @@
 					case "INJ2": changeGame(gameINJ2);break;
 					case "bh": changeGame(gameBrawlhalla);break;
 					case "RoA": changeGame(gameRoA);break;
+					case "JJBA": changeGame(gameJJBA);break;
 					case "ow": changeGame(gameOW);break;
 					case "crusade": changeGame(gameCrusade);break;
 				}
@@ -470,6 +474,7 @@
 				case "INJ2": changeGame(gameINJ2);break;
 				case "RoA": changeGame(gameRoA);break;
 				case "bh": changeGame(gameBrawlhalla);break;
+				case "JJBA": changeGame(gameJJBA);break;
 				case "ow": changeGame(gameOW);break;
 				case "crusade": changeGame(gameCrusade);break;
 
